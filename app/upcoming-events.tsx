@@ -1,4 +1,10 @@
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Calendar } from "lucide-react";
 const events = [
   {
@@ -21,8 +27,13 @@ const events = [
 export function UpcomingEvents() {
   return (
     <Card className="flex-1">
-      <CardContent className="flex flex-col gap-4">
+      <CardHeader>
         <CardTitle>Upcoming Events</CardTitle>
+        <CardDescription>
+          Don't miss what's happening this season!
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
         <ul className="flex flex-col gap-3">
           {events.map(({ title, date, description }, i) => (
             <li key={i} className="flex flex-col gap-1">

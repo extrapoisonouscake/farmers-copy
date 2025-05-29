@@ -19,14 +19,14 @@ const pages = [
     label: "Restaurants",
     href: "/restaurants",
   },
-  { label: "Contact", href: "/contact-us" },
+  { label: "Contact Us", href: "/contact-us" },
 ];
 export default function Header() {
   return (
     <>
       <header className="flex justify-between items-center py-4 px-8 gap-4">
         <Link href="/">
-          <div>Logo</div>
+          <img src={"/logo.png"} className="size-10" />
         </Link>
         <MobileMenu />
         <div className="hidden md:flex gap-4 items-center">
@@ -77,7 +77,7 @@ function PageLinks({ onLinkClick }: { onLinkClick?: () => void }) {
         <li
           key={href}
           className={cn({
-            "font-medium":
+            "font-semibold":
               href === "/" ? href === pathname : pathname.includes(href),
           })}
           onClick={onLinkClick}

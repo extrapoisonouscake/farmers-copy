@@ -77,7 +77,7 @@ export default function Page() {
           className="w-full max-h-[300px] object-cover rounded-lg"
         />
         <div className="flex flex-col gap-2">
-          <h1 className="text-2xl font-bold">
+          <h1 className="text-3xl font-bold">
             Find Your Perfect Stay in Saskatchewan
           </h1>
           <p className="text-muted-fo">
@@ -87,7 +87,7 @@ export default function Page() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {hotels.map(
           ({ name, thumbnail, description, features, link, place }) => (
             <FlipCard

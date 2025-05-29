@@ -1,33 +1,33 @@
 "use client";
 import { ADDRESS, COMPANY_NAME, SOCIAL_NETWORKS } from "@/constants/info";
-import { MailIcon, MapPinned, Phone } from "lucide-react";
+import { MailIcon, MapPinned } from "lucide-react";
 import Link from "next/link";
 import { ReactNode } from "react";
 import { PhoneNumber } from "./phone-number";
 
 export function Footer() {
   return (
-    <footer
-      className="p-8 mt-10 border-t border-border border-dotted flex gap-4 justify-between"
-      style={{ alignItems: "end" }}
-    >
-      <div className="flex gap-4">
-        <div className="flex flex-col gap-2 w-full">
-          <p>{COMPANY_NAME}</p>
-          <TextWithIconAndLabel label="Address" icon={MapPinned}>
-            <p>{ADDRESS}</p>
-          </TextWithIconAndLabel>
-          <TextWithIconAndLabel label="Phone" icon={Phone}>
+    <footer className="py-8 mt-10 border-t border-border flex justify-center">
+      <div
+        className="max-w-[1300px] w-full px-8 flex gap-4 justify-between"
+        style={{ alignItems: "end" }}
+      >
+        <div className="flex gap-4">
+          <div className="flex flex-col gap-2 w-full">
+            <p>{COMPANY_NAME}</p>
+            <TextWithIconAndLabel label="Address" icon={MapPinned}>
+              <p>{ADDRESS}</p>
+            </TextWithIconAndLabel>
             <PhoneNumber />
-          </TextWithIconAndLabel>
-          <TextWithIconAndLabel label="Email" icon={MailIcon}>
-            <Link href="mailto:info@tourismsk.ca">info@tourismsk.ca</Link>
-          </TextWithIconAndLabel>
+            <TextWithIconAndLabel label="Email" icon={MailIcon}>
+              <Link href="mailto:info@tourismsk.ca">info@tourismsk.ca</Link>
+            </TextWithIconAndLabel>
+          </div>
         </div>
-      </div>
-      <div className="flex flex-col gap-2" style={{ alignItems: "end" }}>
-        <p className="">Follow Us</p>
-        <SocialNetworks />
+        <div className="flex flex-col gap-2" style={{ alignItems: "end" }}>
+          <p className="">Follow Us</p>
+          <SocialNetworks />
+        </div>
       </div>
     </footer>
   );

@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { FormInput } from "@/components/ui/input";
 import { FormTextarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -34,6 +40,7 @@ export function ContactUsForm() {
     <Card className="md:w-[400px]">
       <CardHeader>
         <CardTitle>Contact Us</CardTitle>
+        <CardDescription>We typically respond within 2 hours.</CardDescription>
       </CardHeader>
       <CardContent className="flex flex-row justify-between">
         <form

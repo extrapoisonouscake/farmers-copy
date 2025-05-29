@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useCallback } from "react";
@@ -26,7 +27,9 @@ const items = [
   },
 ];
 export function Carousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay({ playOnInit: true, delay: 3000 }),
+  ]);
 
   const scrollPrev = useCallback(() => {
     if (emblaApi) emblaApi.scrollPrev();
@@ -83,13 +86,14 @@ function NavigationButton({
     <Button
       disabled={disabled}
       onClick={onClick}
+      variant="ghost"
       className={cn(
-        "text-muted-foreground border-0 hover:bg-hover absolute size-10 z-10 rounded-full top-1/2 -translate-y-1/2 p-1 bg-background",
+        "text-white border-0 hover:text-white shadow-2xl absolute size-10 z-10 rounded-full top-1/2 -translate-y-1/2 p-1 ",
         className
       )}
       aria-label={label}
     >
-      <Icon className="size-6" />
+      <Icon className="size-10" />
     </Button>
   );
 }

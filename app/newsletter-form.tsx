@@ -1,5 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { FormInput } from "@/components/ui/input";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
@@ -25,7 +31,10 @@ export function NewsletterForm() {
   return (
     <Card className="md:w-[350px]">
       <CardHeader>
-        <CardTitle>Newsletter</CardTitle>
+        <CardTitle>Stay in the Know</CardTitle>
+        <CardDescription>
+          Sign up to receive travel tips, event updates, and exclusive offers!
+        </CardDescription>
       </CardHeader>
       <CardContent className="flex flex-row justify-between">
         <form
