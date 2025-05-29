@@ -26,7 +26,7 @@ export default function Header() {
     <>
       <header className="flex justify-between items-center py-4 px-8 gap-4">
         <Link href="/">
-          <img src={"/logo.png"} className="size-10" />
+          <img src={"/logo.png"} className="size-8 md:size-10" />
         </Link>
         <MobileMenu />
         <div className="hidden md:flex gap-4 items-center">
