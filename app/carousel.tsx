@@ -88,7 +88,7 @@ function NavigationButton({
       onClick={onClick}
       variant="ghost"
       className={cn(
-        "text-white border-0 hover:text-white shadow-2xl absolute size-10 z-10 rounded-full top-1/2 -translate-y-1/2 p-1 ",
+        "text-white border-0 hover:bg-transparent hover:text-white shadow-2xl absolute size-10 z-10 rounded-full top-1/2 -translate-y-1/2 p-1 ",
         className
       )}
       aria-label={label}
