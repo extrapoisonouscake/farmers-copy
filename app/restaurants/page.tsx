@@ -65,9 +65,9 @@ export default function Page() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {RESTAURANTS.map(
-          ({ name, thumbnail, description, features, link, place }) => (
+          ({ name, thumbnail, description, features, link, place }, i) => (
             <FlipCard
-              key={name}
+              key={i}
               front={
                 <Card className="flex justify-center flex-col size-full rounded-lg">
                   <CardContent className="flex flex-col gap-2 p-4">
